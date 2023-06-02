@@ -1,0 +1,22 @@
+add_newline = false
+
+format = """
+$character$directory\
+"""
+
+right_format = """
+$cmd_duration\
+"""
+
+[directory]
+style = "bold blue"
+truncation_length = 1
+
+[character]
+success_symbol = "[➜](purple)"
+error_symbol = "[➜](purple)"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "bold yellow"
+
