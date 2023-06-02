@@ -2,6 +2,7 @@ add_newline = false
 
 format = """
 $character$directory\
+$python
 """
 
 right_format = """
@@ -20,3 +21,8 @@ error_symbol = "[➜](purple)"
 format = "[$duration]($style) "
 style = "bold yellow"
 
+[python]
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = "bold yellow"
+symbol = " "
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
