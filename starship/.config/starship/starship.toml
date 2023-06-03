@@ -2,10 +2,12 @@ add_newline = false
 
 format = """
 $character$directory\
-$python
+$git_branch\
+$git_status\
 """
 
 right_format = """
+$python\
 $cmd_duration\
 """
 
@@ -21,8 +23,13 @@ error_symbol = "[➜](purple)"
 format = "[$duration]($style) "
 style = "bold yellow"
 
+[git_branch]
+format = 'on [$symbol$branch(:$remote_branch)]($style) '
+symbol = ' '
+style = "bold green"
+
 [python]
-format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
 style = "bold yellow"
 symbol = " "
 python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
