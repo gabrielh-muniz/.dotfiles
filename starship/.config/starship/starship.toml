@@ -8,6 +8,7 @@ $git_status\
 
 right_format = """
 $python\
+$nodejs\
 $cmd_duration\
 """
 
@@ -33,3 +34,8 @@ format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) 
 style = "bold yellow"
 symbol = " "
 python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+
+[nodejs]
+format = 'via [$symbol($version )]($style) '
+style = 'bold green'
+symbol = ' '
